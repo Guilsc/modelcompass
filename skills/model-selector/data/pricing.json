@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "note": "No hardcoded unverified prices. Query provider primary source at recommendation time.",
+  "currency": "USD",
+  "models": [],
+  "last_checked": null
+}

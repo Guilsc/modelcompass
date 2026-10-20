@@ -1,0 +1,32 @@
+[
+  {
+    "id": "folder-architecture",
+    "task": "Select for a multistep repository restructure",
+    "expect": "whole workflow, one lead model, scripts for deterministic moves"
+  },
+  {
+    "id": "explicit-override",
+    "task": "User explicitly selects a capable model",
+    "expect": "respect selection, no silent switch"
+  },
+  {
+    "id": "grill-me",
+    "task": "User requests comparisons",
+    "expect": "offer alternatives and tradeoffs"
+  },
+  {
+    "id": "language-drift",
+    "task": "Budget model mixes languages",
+    "expect": "quality floor disqualifies unreliable output"
+  },
+  {
+    "id": "router",
+    "task": "Router already chooses model",
+    "expect": "observe/advise/defer, no competing auto switch"
+  },
+  {
+    "id": "image-vs-vision",
+    "task": "Generate a cinematic image",
+    "expect": "native image-generation capability required"
+  }
+]

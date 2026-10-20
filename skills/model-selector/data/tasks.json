@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "tasks": [
+    "chat",
+    "code",
+    "architecture",
+    "file-inventory",
+    "file-classification",
+    "research",
+    "image-understanding",
+    "image-generation",
+    "video-understanding",
+    "video-generation",
+    "audio",
+    "documents",
+    "data-analysis",
+    "agentic-workflows"
+  ]
+}

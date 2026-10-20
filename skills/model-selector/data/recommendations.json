@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "note": "Selection procedure, not empirical fixed rankings",
+  "slots": [
+    "best_fit",
+    "best_value",
+    "budget",
+    "fallback"
+  ],
+  "selection": "hard capability and reliability gates, then total-outcome quality/cost with switching overhead",
+  "user_override": "required for explicit model changes"
+}

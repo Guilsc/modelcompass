@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "note": "Starter provider catalog. Not exhaustive; family entries, not API IDs.",
+  "providers": [
+    "OpenAI",
+    "Anthropic",
+    "Google",
+    "DeepSeek",
+    "Qwen",
+    "Kimi",
+    "xAI",
+    "Mistral",
+    "Meta",
+    "creative specialists"
+  ],
+  "evidence": "E",
+  "last_verified": null
+}
