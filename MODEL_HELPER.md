@@ -210,6 +210,23 @@ The last two terms may be nonmonetary; track them in time if dollars are unavail
 5. **Validation:** build/tests/typecheck/path resolution, hash checks, and review exceptional diffs using the **same model**.
 6. **Escalate only** for genuinely difficult architecture or unexpected regressions; provide a short checkpoint to the next model.
 
+## Independent benchmark evidence
+
+Before using leaderboard evidence to support a recommendation, inspect the versioned [benchmark snapshot](skills/model-selector/data/benchmarks.json) and [evidence policy](skills/model-selector/references/benchmarks.md):
+
+```bash
+python skills/model-selector/scripts/benchmarks.py
+```
+
+Use the four sources independently:
+
+- [Artificial Analysis](https://artificialanalysis.ai/models): quality/performance indices under the source's exact evaluation version and configuration.
+- [Arena](https://arena.ai/leaderboard): category-specific evidence under its stated methodology; a model listing or undefined percentage is not chat Elo.
+- [BenchLM](https://benchlm.ai/): preserve estimated or aggregated classifications; do not double-count upstream evidence.
+- [LiveBench](https://livebench.ai/): versioned suites and category scores, not interchangeable with preference rankings.
+
+The inspector keeps exact model labels, settings, source URLs, excerpts, metric/version/category, collection dates, nullable publication dates, and explicit missing values. It flags stale or publication-unknown observations. It does not average incompatible metrics, infer API IDs, switch models, or promote source-reported numbers to independently tested **T** evidence. The snapshot is partial and requires reviewed refreshes; absence is not a zero score. Keep the task matrix above explicitly editorial until relevant task testing supports it.
+
 ## Scoring: quality gates first, then task-specific weights
 
 ### Hard gates

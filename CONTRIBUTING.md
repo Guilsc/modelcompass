@@ -16,7 +16,20 @@ Thanks for helping make model advice more evidence-driven. Contributions should 
 - No invented performance scores, unlimited-context claims, prices, subscription quotas, or unavailable model IDs.
 - Keep `skills/model-selector/SKILL.md` compact; load details on demand.
 - Do not commit API keys, private source code, user data, model provider output without rights, or benchmark data with unclear licensing.
-- Run `python tests/validate_package.py` and `python tests/run_evaluations.py` before proposing changes.
+- Run `python tests/validate_package.py`, `python tests/run_evaluations.py`, and
+  `python -m unittest discover -s tests -p 'test_*.py'` before proposing changes.
+
+## Source-reported benchmark updates
+
+Follow [`references/benchmarks.md`](skills/model-selector/references/benchmarks.md)
+when updating `skills/model-selector/data/benchmarks.json`. Keep each source's
+metric, version, settings, category, units, excerpt and dates distinct. Preserve
+estimated classifications, null scores and missing reasons. Do not average
+leaderboards or treat BenchLM's upstream evidence as independent corroboration.
+The optional offline inspector uses Python 3.11+ and no dependencies or API keys.
+
+Never run paid provider inference merely to validate the repository. Existing
+policy fixtures are structural checks, not measured recommendation accuracy.
 
 ## Proposed benchmark record
 
