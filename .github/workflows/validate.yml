@@ -10,3 +10,4 @@ jobs:
           python-version: '3.11'
       - run: python tests/validate_package.py
       - run: python tests/run_evaluations.py
+      - run: python -m unittest discover -s tests -p 'test_*.py'

@@ -11,7 +11,7 @@ Select models by **whole-task outcome**, not individual microsteps or cheapest t
 
 1. Identify the full workflow, required output modality, quality floor, privacy restrictions, available platform/models, budget, session continuity, and whether the user has already selected a model.
 2. Apply hard eligibility gates: native generation vs understanding, tool availability, language/format fidelity, context capacity, safe operation, and authorized spending. Exclude unqualified candidates before ranking.
-3. Read only relevant modules from `references/`: `task-matrix.md` for a matched task; `model-catalog.md` for model capabilities; `reasoning-levels.md` for effort; `cost-efficiency.md` for sessions and cost; `sources.md` to check freshness. Use `data/` only for a machine-readable shortlist, never assume it is exhaustive.
+3. Read only relevant modules from `references/`: `task-matrix.md` for a matched task; `model-catalog.md` for model capabilities; `reasoning-levels.md` for effort; `cost-efficiency.md` for sessions and cost; `sources.md` to check freshness. Use `data/` only for a machine-readable shortlist, never assume it is exhaustive. For benchmark-informed comparisons, read `references/benchmarks.md` and inspect `data/benchmarks.json` (optionally via `python scripts/benchmarks.py` from this skill directory). Cite source-specific metric/version/settings and dates; preserve missing data and estimated evidence. Never combine scores across sources or treat an aggregate as independent corroboration.
 4. Present **Best Fit**, **Best Value**, **Budget**, **Fallback** as justified candidates with evidence tags: **D** provider documented, **E** editorial assessment, **T** independently tested, **U** unverified. Do not invent rankings, tokens, API IDs, prices, or benchmark scores.
 5. Prefer one capable lead model across tightly coupled phases when handoffs waste context. Use deterministic utilities for inventory, hashes, moves, builds, tests and validation where possible. Escalate reasoning effort only for concrete unresolved difficulty; do not assume maximum effort is optimal.
 6. If the user explicitly specified a capable model or effort, **respect it**. In default **Advisory** mode, suggest an alternative only if materially beneficial, at most once for the same circumstances. Ask whether to use the recommendation, keep their choice, or enter **Grill Me** comparison mode. **Strict preference** suppresses cost nudges. **Auto-select** requires explicit delegation and must obey scope and constraints.
@@ -38,6 +38,7 @@ If the host already uses a model selector (`/model`, platform picker) or an inte
 - `references/cost-efficiency.md`: complete-outcome efficiency.
 - `references/advisory-protocol.md`: user override, Grill Me, strict mode.
 - `references/sources.md`: source URLs and maintenance requirements.
+- `references/benchmarks.md`: benchmark evidence, freshness, missing data and update policy.
 - `references/router-interoperability.md`: coexistence with model pickers, gateways and intelligent routers.
 
 If the host cannot resolve `references/`, package those files alongside this skill in an installable directory and adjust paths. Full portable specification: `MODEL_HELPER.md`.

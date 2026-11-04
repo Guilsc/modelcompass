@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "coverage": "Partial manually transcribed source observations, not complete leaderboards or model recommendations.",
+  "sources": {
+    "artificial_analysis": {
+      "name": "Artificial Analysis",
+      "url": "https://artificialanalysis.ai/models",
+      "checked_at": "2026-11-03",
+      "method": "Public page text extraction; Intelligence Index FAQ.",
+      "limitations": "Index v5.0 is a source-defined composite. Model settings matter; this is not task-specific validation or an API model ID."
+    },
+    "arena": {
+      "name": "Arena",
+      "url": "https://arena.ai/leaderboard",
+      "checked_at": "2026-11-03",
+      "method": "Public page text extraction; Top 10 Agents / Best Overall section.",
+      "limitations": "Landing page contains multiple categories. Extracted percentages lack a sufficiently explicit metric definition; no numeric score is imported. Inspect the category methodology, sample counts and uncertainty before using a ranking."
+    },
+    "benchlm": {
+      "name": "BenchLM",
+      "url": "https://benchlm.ai/",
+      "checked_at": "2026-11-03",
+      "method": "Public page text extraction; current answer and overall rankings.",
+      "limitations": "BenchAlign composite aggregates source families and includes estimated-ranked entries. It is not independent corroboration of its upstream sources. Conditional ranges do not establish rank confidence."
+    },
+    "livebench": {
+      "name": "LiveBench",
+      "url": "https://livebench.ai/",
+      "checked_at": "2026-11-03",
+      "method": "Public page text extraction; LiveBench 2.0 leaderboard.",
+      "limitations": "Source describes one run per suite, with weighted overall across suites with a score. This 2.0 snapshot must not be mixed with earlier LiveBench versions; unknown model settings and missing suites limit comparisons."
+    }
+  },
+  "observations": [
+    {
+      "source": "artificial_analysis",
+      "model_label": "Gemini 4 Carbon (High)",
+      "configuration": "High; remaining harness details not captured",
+      "metric": "Intelligence Index",
+      "version": "5.0",
+      "category": "overall",
+      "unit": "source-defined index points",
+      "direction": "higher",
+      "score": 59,
+      "published_at": null,
+      "observed_at": "2026-11-03",
+      "source_url": "https://artificialanalysis.ai/models",
+      "evidence_kind": "source_reported",
+      "excerpt": "Gemini 4 Carbon (High) currently leads the Artificial Analysis Intelligence Index with a score of 59, out of 90 models evaluated.",
+      "missing_reason": null
+    },
+    {
+      "source": "arena",
+      "model_label": "Claude Opus 5.5 (Max)",
+      "configuration": "Max; remaining harness details not captured",
+      "metric": "Best Overall Agents landing-page listing",
+      "version": "not reported",
+      "category": "agent / Best Overall",
+      "unit": "not established",
+      "direction": "higher",
+      "score": null,
+      "published_at": null,
+      "observed_at": "2026-11-03",
+      "source_url": "https://arena.ai/leaderboard",
+      "evidence_kind": "unverified",
+      "excerpt": "1 Claude Opus 5.5 (Max) 20.92%",
+      "missing_reason": "The extracted percentage has no explicit metric definition. Preserved as a quote only, not interpreted as Elo, accuracy or win rate."
+    },
+    {
+      "source": "benchlm",
+      "model_label": "Gemini 4 Carbon",
+      "configuration": "not reported",
+      "metric": "BenchAlign BenchLM overall score",
+      "version": "not reported",
+      "category": "overall",
+      "unit": "source-defined composite points",
+      "direction": "higher",
+      "score": 88.38,
+      "published_at": "2026-10-29",
+      "observed_at": "2026-11-03",
+      "source_url": "https://benchlm.ai/",
+      "evidence_kind": "estimated",
+      "excerpt": "Gemini 4 Carbon is first by point estimate on the BenchAlign BenchLM leaderboard at 88.38; Estimated-ranked (2 source families).",
+      "missing_reason": null
+    },
+    {
+      "source": "livebench",
+      "model_label": "Claude Fable 5.1",
+      "configuration": "not reported",
+      "metric": "Overall",
+      "version": "2.0",
+      "category": "overall",
+      "unit": "source-defined weighted suite points",
+      "direction": "higher",
+      "score": 85.7,
+      "published_at": null,
+      "observed_at": "2026-11-03",
+      "source_url": "https://livebench.ai/",
+      "evidence_kind": "source_reported",
+      "excerpt": "Claude Fable 5.1 | 85.7 | 77.9 | 83.4 | 97.7 | 89.8 | 80.3 | 82.0 | 91.7",
+      "missing_reason": null
+    }
+  ]
+}
