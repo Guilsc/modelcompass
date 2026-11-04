@@ -79,9 +79,9 @@ reads local JSON only; it is not a scraper or live benchmark runner.
 
 ## Selection flow
 
-![Repository architecture](docs/assets/architecture.svg)
+![Four benchmark sources, evidence checks, and qualified advice](docs/assets/architecture.svg)
 
-[Editable HTML/SVG source](docs/architecture.html) · [Diagram style](docs/assets/architecture.style.json)
+The four benchmark sources keep their own metric meaning. Missing or stale evidence is disclosed, not filled in. The SVG is the editable source.
 
 
 ## Repository layout
